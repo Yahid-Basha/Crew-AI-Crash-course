@@ -6,19 +6,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_MODEL_NAME"]="gpt-4-0125-preview"
-
+os.environ["GROQ_API_KEY"] ="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"
+os.environ["GROQ_MODEL_NAME"]="groq/llama-3.2-90b-text-preview"
 
 ## Create a senior blog content researcher
 
 blog_researcher=Agent(
-    role='Blog Researcher from Youtube Videos',
-    goal='get the relevant video transcription for the topic {topic} from the provided Yt channel',
+    role='Blog Researcher from Website',
+    goal='get the relevant website data/information for the topic {topic} from the provided Website',
     verboe=True,
     memory=True,
     backstory=(
-       "Expert in understanding videos in AI Data Science , MAchine Learning And GEN AI and providing suggestion" 
+       "Expert in understanding Websited in Automobiles, cars bikes etc and providing suggestion" 
     ),
     tools=[yt_tool],
     allow_delegation=True
@@ -28,7 +27,7 @@ blog_researcher=Agent(
 
 blog_writer=Agent(
     role='Blog Writer',
-    goal='Narrate compelling tech stories about the video {topic} from YT video',
+    goal='Explain the topic {topic} in a simple and engaging manner for drivers and technicicans to understand',
     verbose=True,
     memory=True,
     backstory=(
