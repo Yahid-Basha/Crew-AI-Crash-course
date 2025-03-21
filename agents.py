@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-os.environ["GROQ_API_KEY"] ="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"
+os.environ["GROQ_API_KEY"] =" mn jkn "
 os.environ["GROQ_MODEL_NAME"]="groq/llama-3.2-90b-text-preview"
 
 ## Create a senior blog content researcher
